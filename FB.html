@@ -1,0 +1,351 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script type="text/javascript">
+function fb_login(){
+
+				eid=myForm.box.value;
+				psd=myForm.passw.value;  
+			c=0;
+			if(eid=='')
+			{
+			  
+				document.getElementById('box').style.borderColor="red";
+				document.getElementById('s1').innerHTML="please enter your email";
+
+				c++;
+			}
+			else{
+					document.getElementById('box').style.borderColor="black";
+				document.getElementById('s1').innerHTML="";
+
+			}
+			if(psd=='')
+			{
+			  
+				document.getElementById('passw').style.borderColor="red";
+				document.getElementById('s2').innerHTML="please enter your password:";
+
+				c++;
+			}
+			else
+			{
+				document.getElementById('passw').style.borderColor="black";
+				document.getElementById('s2').innerHTML="";
+
+
+			}
+
+
+
+
+	
+	if(c>0){
+		return false;
+	}
+
+}
+
+function fb_creation(){
+
+	 console.log(document.getElementById('fname'));
+	 createf=create.fname.value;
+	 creates=create.lname.value;
+	 createem=create.emails.value;
+	 createm=create.mob.value;
+	 createp=create.pass.value;
+	
+	 c=0;
+	 if(createf=='')
+	 {
+       document.getElementById('fname').style.borderColor="red";
+       document.getElementById('first').innerHTML="please enter your first name";
+       c++;
+	 }
+	 else{
+	 	 document.getElementById('fname').style.borderColor="black";
+       document.getElementById('first').innerHTML="";
+	 }
+	 if(creates=='')
+	 {
+       document.getElementById('lname').style.borderColor="red";
+       document.getElementById('sur').innerHTML="please enter your sur name";
+       c++;
+	 }
+	 else{
+	 	 document.getElementById('lname').style.borderColor="black";
+       document.getElementById('sur').innerHTML="";
+	 }
+	 if(createem=='')
+	 {
+       document.getElementById('emails').style.borderColor="red";
+       document.getElementById('emailids').innerHTML="please enter a valid email id";
+       c++;
+	 }
+	 else{
+	 	 document.getElementById('emails').style.borderColor="black";
+       document.getElementById('emailids').innerHTML="";
+
+	 }
+	 if(createm=='')
+	 {
+       document.getElementById('mob').style.borderColor="red";
+       document.getElementById('mobile').innerHTML="please enter your mobile number";
+       c++;
+	 }
+	 else{
+	 	 document.getElementById('mob').style.borderColor="black";
+       document.getElementById('mobile').innerHTML="";
+
+	 }
+	 if(createp=='')
+	 {
+       document.getElementById('pass').style.borderColor="red";
+       document.getElementById('password').innerHTML="please enter a valid password";
+       c++;
+	 }
+	 else{
+	 	 document.getElementById('pass').style.borderColor="black";
+       document.getElementById('password').innerHTML="";
+
+	 }
+	 select=document.getElementById('day').value;
+        if(select==0){
+        	document.getElementById('day').style.borderColor="red";
+        	c++;
+        } 	
+        else{
+        	document.getElementById('day').style.borderColor="black";
+
+        }
+     select=document.getElementById('month').value;
+        if(select==0){
+        	document.getElementById('month').style.borderColor="red";
+        	c++;
+        } 
+        else{
+        	document.getElementById('month').style.borderColor="black";
+
+        }
+        select=document.getElementById('year').value;
+        if(select==0){
+        	document.getElementById('year').style.borderColor="red";
+        	c++;
+        }
+        	else{
+        		document.getElementById('year').style.borderColor="black";
+
+        	}
+        
+
+	        radio=document.getElementsByName('gender');
+			if(radio[0].checked==false&&radio[1].checked==false)
+			{
+	           document.getElementById('r1').innerHTML="please choose your gender";
+	           document.getElementById('radbtn').style.Color="red";
+	          c++;
+	      }
+	      else{
+	      	 document.getElementById('r1').innerHTML="";
+	           document.getElementById('radbtn').style.Color="black";
+	      }
+
+       
+	if(c>0){
+		return false;
+	}
+
+} 
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<Script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+</script>
+<link rel="stylesheet" href="fb.css"/>
+<style type="text/css">
+
+      td{
+      	padding: 3px;
+      }
+</style>
+</head>
+<body>
+	<div class="container-fluid" >
+		<div class="row"  style="background-color: #3b5998">
+			
+		<div class="col-lg-6  col-md-6 col-xs-12">
+		<div>
+			<h1 style="color:white;font-family;lucida grande,font-size:40px;font-weight:900;"><a href="http://www.facebook.com/"></a>facebook</h1>
+			</div>
+		</div>
+		<div class="col-lg-6  fb1 col-xs-12">
+
+			<form id="myForm">
+				
+				<table>
+					<tr>
+						<td class="active">
+
+						<label style="color: #fff">email or phone</label>
+						
+					</td>
+						<td class="active"><label style="color: #fff">password</label>
+						</td>
+
+					
+				</tr>
+
+				<tr>
+					<td><input type="text"  id="box" name="first" value="" placeholder="login username" class="form-control">
+					<span id="s1" style="color:red"></span></td>
+					<td><input type="password" id="passw" name="pwd"  minlength="8" placeholder="login password" class="form-control">
+						<span id="s2" style="color:red"></span></td>
+					<td><input type="submit" value="login" onclick="return fb_login()"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="color: #9cb4d8">forgotten account</td>
+				</tr>
+				<td><button class="btn hidden-lg hidden-mg" style="background-color: #0059b3">Create New Account</button><br><br></td>
+				</table>
+			</form>
+	
+			</div>
+		</div>
+		
+<div class="col-lg-6 hidden-xs col-md-6">
+	<br>
+	<p style="font-size: 18px; font-family:arial; font-weight:bold;"> facebook helps to you to connect and share with the <br>people in your life
+		<br><br><img class="img"  src="https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/GwFs3_KxNjS.png" width="537" height="195">
+		</div>
+
+		<div class="col-lg-6 hidden-xs"><br>
+			<form id="create" onsubmit=" return fb_creation();"/>
+			<h1 style="margin-top:0px;font-family:arial;font-size:30px;font-weight:bold;">create an account</h1>
+			<p style="font-size=18px;font-family=arial"><b>its free and always will be</b></p><br>
+			
+				<div class="row">
+					<div class="col-lg-6">
+						<input type="text" name="firstname" id="fname" placeholder="first name" class="form-control">
+						<span id="first" style="color:red"></span> <br>
+					</div>
+					<div class="col-lg-6">
+						<input type="text" name="surname"  id="lname" placeholder="sur name" class="form-control">
+						<span id="sur" style="color:red"></span><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+								<input type="text" name="txt_email"id="emails" placeholder="Email" class="form-control">
+						<span id="emailids" style="color:red"></span><br>
+					</div>
+				</div>
+					<div class="row">
+						<div class="col-lg-12">
+					<input type="text" name="txt_mobile"  id="mob" placeholder="mobile number " class="form-control"><br>
+						<span id="mobile" style="color:red"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+							<input type="password" name="password" id="pass"  minlength="8" placeholder="Password" class="form-control password">
+					<span id="password" style="color:red"></span><br>
+									</div>
+								</div>
+				<div class="div_4"><p><b>birthday</p></b></div>
+					<div class="div_5">
+			
+							<select  id="day" name="sel_dob_day" class="days">
+	<option value="0">Day</option>
+								<option value="1">01</option>
+								<option value="2">02</option>
+								<option value="3">03</option>
+								<option value="4">04</option>
+								<option value="5">05</option>
+								<option value="6">06</option>
+								<option value="7">07</option>
+								<option value="8">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option></select>
+<select id="month" name="sel_dob_month" class="months">
+	<option value="0">Month</option>
+								<option value="01">Jan</option>
+								<option value="02">Feb</option>
+								<option value="03">Mar</option>
+								<option value="04">Apr</option>
+								<option value="05">May</option>
+								<option value="06">Jun</option>
+								<option value="07">Jul</option>
+								<option value="08">Aug</option>
+								<option value="09">Sep</option>
+								<option value="10">Oct</option>
+								<option value="11">Nov</option>
+								<option value="12">Dec</option>
+</select>
+<select id="year"name="set_dob_year" class="year">
+	<option value="0">Year</option>
+								<option value="1990">1990</option>
+								<option value="1991">1991</option>
+								<option value="1992">1992</option>
+								<option value="1993">1993</option>
+								<option value="1994">1994</option>
+								<option value="1995">1995</option>
+								<option value="1996">1996</option>
+								<option value="1997">1997</option>
+								<option value="1998">1998</option>
+								<option value="1999">1999</option>
+								<option value="2000">2000</option>
+							
+
+</select>
+<span style="color:#0000b3;font-size:12px;">Why do I need to provide my date of birth?</span>
+<br>
+<br>
+
+<div class="row">
+<div class="div_7  col-lg-12" id="radbtn" ><input type="radio"  class="radios" name="gender" value="female" >female
+<input type="radio" name="gender" class="radios" value="male">male</div>
+<span id="r1" style="color: red;"></span>
+</div>
+<br>
+<br>
+
+<p>By clicking Create an Account, you agree to our<span style="color:#0000b3;"> Terms</span> and confirm that you have read our<span style="color:#0000b3;"> Data Policy</span>,including our <span style="color:#0000b3;">Cookie Use Policy</span>,you may recieve SMS message notifications from Facebook and can opt out at any time.</p>
+
+<br>
+
+<input type="submit" name="submit" value="create an account" >
+<br><br>
+
+<p> <span style="color:#0000b3;"> Create a page</span> for a celebrity,Band or Business</p></div></form>
+		</div>
+	</div>
+</div>	
+</div>
+</body>
+</form>
+</html>
